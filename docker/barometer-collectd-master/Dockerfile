@@ -11,8 +11,7 @@ ENV repos_dir /src
 ENV openstack_plugins /src/barometer/src/collectd-openstack-plugins
 
 WORKDIR ${repos_dir}
-RUN mkdir -p ${repos_dir}/barometer
-COPY . ${repos_dir}/barometer
+
 
 WORKDIR ${repos_dir}/barometer/systems
 RUN sh ./build_base_machine.sh && \
